@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Daftar Widget Flutter By ChatGpt & Gemini</title>
+  <title>Daftar Widget Flutter dengan Link Preview</title>
   <style>
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -19,9 +19,9 @@
       margin-top: 2.5rem;
     }
     h1 {
-        text-align: center;
-        border-bottom: none;
-        margin-bottom: 2rem;
+      text-align: center;
+      border-bottom: none;
+      margin-bottom: 2rem;
     }
     table {
       width: 100%;
@@ -36,6 +36,7 @@
       padding: 0.9rem 1.1rem;
       text-align: left;
       border-bottom: 1px solid #eee;
+      vertical-align: middle;
     }
     th {
       background-color: #ecf0f1;
@@ -55,8 +56,24 @@
       font-size: 0.9em;
     }
     .container {
-        max-width: 1000px;
-        margin: auto;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .doc-button {
+        background-color: #3498db;
+        color: white;
+        padding: 6px 12px;
+        border-radius: 5px;
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 0.85em;
+        display: inline-block;
+        transition: background-color 0.2s ease;
+    }
+    .doc-button:hover {
+        background-color: #2980b9;
+        text-decoration: none;
+        color: white;
     }
   </style>
 </head>
@@ -64,122 +81,122 @@
 
 <div class="container">
 
-  <h1>📚 Daftar Widget Flutter Lengkap</h1>
+  <h1>📚 Daftar Widget Flutter dengan Tombol Dokumentasi</h1>
 
   <h2>🧱 1. Widget Dasar</h2>
   <table>
-    <tr><th>Widget</th><th>Fungsi</th><th>Kapan Digunakan</th></tr>
-    <tr><td><code>StatelessWidget</code></td><td>Widget tanpa state (data) internal</td><td>Untuk UI statis yang tidak berubah</td></tr>
-    <tr><td><code>StatefulWidget</code></td><td>Widget dengan state (data) internal</td><td>Untuk UI dinamis yang bisa berubah</td></tr>
-    <tr><td><code>Text</code></td><td>Menampilkan teks sederhana</td><td>Label, paragraf, judul, dll.</td></tr>
-    <tr><td><code>RichText</code></td><td>Menampilkan teks dengan berbagai style</td><td>Saat butuh kata tebal/miring dalam satu kalimat</td></tr>
-    <tr><td><code>Icon</code></td><td>Menampilkan ikon dari set ikon</td><td>Untuk simbol UI yang umum</td></tr>
+    <tr><th>Widget</th><th>Fungsi</th><th>Kapan Digunakan</th><th>Dokumentasi</th></tr>
+    <tr><td><code>StatelessWidget</code></td><td>Widget tanpa state (data) internal</td><td>Untuk UI statis yang tidak berubah</td><td><a href="https://api.flutter.dev/flutter/widgets/StatelessWidget-class.html" target="_blank" class="doc-button">Lihat Dokumentasi</a></td></tr>
+    <tr><td><code>StatefulWidget</code></td><td>Widget dengan state (data) internal</td><td>Untuk UI dinamis yang bisa berubah</td><td><a href="https://api.flutter.dev/flutter/widgets/StatefulWidget-class.html" target="_blank" class="doc-button">Lihat Dokumentasi</a></td></tr>
+    <tr><td><code>Text</code></td><td>Menampilkan teks sederhana</td><td>Label, paragraf, judul, dll.</td><td><a href="https://api.flutter.dev/flutter/widgets/Text-class.html" target="_blank" class="doc-button">Lihat Dokumentasi</a></td></tr>
+    <tr><td><code>RichText</code></td><td>Menampilkan teks dengan berbagai style</td><td>Saat butuh kata tebal/miring dalam satu kalimat</td><td><a href="https://api.flutter.dev/flutter/widgets/RichText-class.html" target="_blank" class="doc-button">Lihat Dokumentasi</a></td></tr>
+    <tr><td><code>Icon</code></td><td>Menampilkan ikon dari set ikon</td><td>Untuk simbol UI yang umum</td><td><a href="https://api.flutter.dev/flutter/widgets/Icon-class.html" target="_blank" class="doc-button">Lihat Dokumentasi</a></td></tr>
   </table>
 
   <hr/>
 
   <h2>🔷 2. Layout & Struktur</h2>
   <table>
-    <tr><th>Widget</th><th>Fungsi</th><th>Kapan Digunakan</th></tr>
-    <tr><td><code>Container</code></td><td>Wrapper serbaguna untuk styling & posisi</td><td>Memberi padding, margin, warna, dekorasi</td></tr>
-    <tr><td><code>Row</code></td><td>Menyusun widget anak secara horizontal</td><td>Untuk item yang berjajar ke samping</td></tr>
-    <tr><td><code>Column</code></td><td>Menyusun widget anak secara vertikal</td><td>Untuk item yang berbaris ke bawah</td></tr>
-    <tr><td><code>Stack</code></td><td>Menumpuk widget di atas satu sama lain</td><td>Membuat overlay, badge di atas ikon</td></tr>
-    <tr><td><code>Expanded</code></td><td>Mengisi ruang tersisa di <code>Row</code>/<code>Column</code></td><td>Agar widget meregang mengisi sisa ruang</td></tr>
-    <tr><td><code>Flexible</code></td><td>Memberi fleksibilitas ukuran di <code>Row</code>/<code>Column</code></td><td>Membagi ruang secara proporsional</td></tr>
-    <tr><td><code>SizedBox</code></td><td>Kotak dengan ukuran tetap atau spasi</td><td>Memberi jarak antar elemen secara eksplisit</td></tr>
-    <tr><td><code>Padding</code></td><td>Memberi spasi di sekeliling widget anak</td><td>Untuk memberi ruang napas di dalam kontainer</td></tr>
-    <tr><td><code>Center</code></td><td>Memposisikan anak di tengah parent</td><td>Cara cepat menengahkan satu widget</td></tr>
-    <tr><td><code>Card</code></td><td>Panel dengan sudut tumpul dan bayangan</td><td>Mengelompokkan informasi terkait dalam satu blok</td></tr>
-    <tr><td><code>Wrap</code></td><td>Otomatis ke baris baru jika tidak muat</td><td>Untuk chip/tag yang jumlahnya dinamis</td></tr>
+    <tr><th>Widget</th><th>Fungsi</th><th>Kapan Digunakan</th><th>Dokumentasi</th></tr>
+    <tr><td><code>Container</code></td><td>Wrapper serbaguna untuk styling & posisi</td><td>Memberi padding, margin, warna, dekorasi</td><td><a href="https://api.flutter.dev/flutter/widgets/Container-class.html" target="_blank" class="doc-button">Lihat Dokumentasi</a></td></tr>
+    <tr><td><code>Row</code></td><td>Menyusun widget anak secara horizontal</td><td>Untuk item yang berjajar ke samping</td><td><a href="https://api.flutter.dev/flutter/widgets/Row-class.html" target="_blank" class="doc-button">Lihat Dokumentasi</a></td></tr>
+    <tr><td><code>Column</code></td><td>Menyusun widget anak secara vertikal</td><td>Untuk item yang berbaris ke bawah</td><td><a href="https://api.flutter.dev/flutter/widgets/Column-class.html" target="_blank" class="doc-button">Lihat Dokumentasi</a></td></tr>
+    <tr><td><code>Stack</code></td><td>Menumpuk widget di atas satu sama lain</td><td>Membuat overlay, badge di atas ikon</td><td><a href="https://api.flutter.dev/flutter/widgets/Stack-class.html" target="_blank" class="doc-button">Lihat Dokumentasi</a></td></tr>
+    <tr><td><code>Expanded</code></td><td>Mengisi ruang tersisa di <code>Row</code>/<code>Column</code></td><td>Agar widget meregang mengisi sisa ruang</td><td><a href="https://api.flutter.dev/flutter/widgets/Expanded-class.html" target="_blank" class="doc-button">Lihat Dokumentasi</a></td></tr>
+    <tr><td><code>Flexible</code></td><td>Memberi fleksibilitas ukuran di <code>Row</code>/<code>Column</code></td><td>Membagi ruang secara proporsional</td><td><a href="https://api.flutter.dev/flutter/widgets/Flexible-class.html" target="_blank" class="doc-button">Lihat Dokumentasi</a></td></tr>
+    <tr><td><code>SizedBox</code></td><td>Kotak dengan ukuran tetap atau spasi</td><td>Memberi jarak antar elemen secara eksplisit</td><td><a href="https://api.flutter.dev/flutter/widgets/SizedBox-class.html" target="_blank" class="doc-button">Lihat Dokumentasi</a></td></tr>
+    <tr><td><code>Padding</code></td><td>Memberi spasi di sekeliling widget anak</td><td>Untuk memberi ruang napas di dalam kontainer</td><td><a href="https://api.flutter.dev/flutter/widgets/Padding-class.html" target="_blank" class="doc-button">Lihat Dokumentasi</a></td></tr>
+    <tr><td><code>Center</code></td><td>Memposisikan anak di tengah parent</td><td>Cara cepat menengahkan satu widget</td><td><a href="https://api.flutter.dev/flutter/widgets/Center-class.html" target="_blank" class="doc-button">Lihat Dokumentasi</a></td></tr>
+    <tr><td><code>Card</code></td><td>Panel dengan sudut tumpul dan bayangan</td><td>Mengelompokkan informasi terkait dalam satu blok</td><td><a href="https://api.flutter.dev/flutter/material/Card-class.html" target="_blank" class="doc-button">Lihat Dokumentasi</a></td></tr>
+    <tr><td><code>Wrap</code></td><td>Otomatis ke baris baru jika tidak muat</td><td>Untuk chip/tag yang jumlahnya dinamis</td><td><a href="https://api.flutter.dev/flutter/widgets/Wrap-class.html" target="_blank" class="doc-button">Lihat Dokumentasi</a></td></tr>
   </table>
 
   <hr/>
 
   <h2>🟢 3. List & Grid</h2>
   <table>
-    <tr><th>Widget</th><th>Fungsi</th><th>Kapan Digunakan</th></tr>
-    <tr><td><code>ListView</code></td><td>Daftar item yang bisa di-scroll</td><td>Untuk daftar item yang jumlahnya sedikit dan statis</td></tr>
-    <tr><td><code>ListView.builder</code></td><td>Lazy loading list (membangun saat terlihat)</td><td>Daftar item yang panjang atau dari API</td></tr>
-    <tr><td><code>GridView</code></td><td>Grid layout yang bisa di-scroll</td><td>Galeri foto, katalog produk</td></tr>
-    <tr><td><code>SingleChildScrollView</code></td><td>Scroll untuk satu widget anak</td><td>Membuat halaman form atau konten statis jadi scrollable</td></tr>
-    <tr><td><code>ListTile</code></td><td>Baris list standar (ikon, teks, aksi)</td><td>Item standar di dalam <code>ListView</code></td></tr>
-    <tr><td><code>DataTable</code></td><td>Tabel untuk menampilkan data terstruktur</td><td>Menampilkan data tabular seperti spreadsheet</td></tr>
-    <tr><td><code>PageView</code></td><td>Halaman yang bisa digeser (swipe)</td><td>Untuk onboarding screen atau galeri swipe</td></tr>
+    <tr><th>Widget</th><th>Fungsi</th><th>Kapan Digunakan</th><th>Dokumentasi</th></tr>
+    <tr><td><code>ListView</code></td><td>Daftar item yang bisa di-scroll</td><td>Untuk daftar item yang jumlahnya sedikit dan statis</td><td><a href="https://api.flutter.dev/flutter/widgets/ListView-class.html" target="_blank" class="doc-button">Lihat Dokumentasi</a></td></tr>
+    <tr><td><code>ListView.builder</code></td><td>Lazy loading list (membangun saat terlihat)</td><td>Daftar item yang panjang atau dari API</td><td><a href="https://api.flutter.dev/flutter/widgets/ListView-class.html" target="_blank" class="doc-button">Lihat Dokumentasi</a></td></tr>
+    <tr><td><code>GridView</code></td><td>Grid layout yang bisa di-scroll</td><td>Galeri foto, katalog produk</td><td><a href="https://api.flutter.dev/flutter/widgets/GridView-class.html" target="_blank" class="doc-button">Lihat Dokumentasi</a></td></tr>
+    <tr><td><code>SingleChildScrollView</code></td><td>Scroll untuk satu widget anak</td><td>Membuat halaman form atau konten statis jadi scrollable</td><td><a href="https://api.flutter.dev/flutter/widgets/SingleChildScrollView-class.html" target="_blank" class="doc-button">Lihat Dokumentasi</a></td></tr>
+    <tr><td><code>ListTile</code></td><td>Baris list standar (ikon, teks, aksi)</td><td>Item standar di dalam <code>ListView</code></td><td><a href="https://api.flutter.dev/flutter/material/ListTile-class.html" target="_blank" class="doc-button">Lihat Dokumentasi</a></td></tr>
+    <tr><td><code>DataTable</code></td><td>Tabel untuk menampilkan data terstruktur</td><td>Menampilkan data tabular seperti spreadsheet</td><td><a href="https://api.flutter.dev/flutter/material/DataTable-class.html" target="_blank" class="doc-button">Lihat Dokumentasi</a></td></tr>
+    <tr><td><code>PageView</code></td><td>Halaman yang bisa digeser (swipe)</td><td>Untuk onboarding screen atau galeri swipe</td><td><a href="https://api.flutter.dev/flutter/widgets/PageView-class.html" target="_blank" class="doc-button">Lihat Dokumentasi</a></td></tr>
   </table>
 
   <hr/>
 
   <h2>🟡 4. Input & Form</h2>
   <table>
-    <tr><th>Widget</th><th>Fungsi</th><th>Kapan Digunakan</th></tr>
-    <tr><td><code>Form</code></td><td>Wadah untuk field input</td><td>Mengelola validasi dan penyimpanan grup input</td></tr>
-    <tr><td><code>TextFormField</code></td><td>Input teks dengan integrasi <code>Form</code></td><td>Input email, password, dll., dengan validasi</td></tr>
-    <tr><td><code>Checkbox</code> / <code>Radio</code> / <code>Switch</code></td><td>Pilihan biner atau tunggal</td><td>Pengaturan, persetujuan syarat, pilihan opsi</td></tr>
-    <tr><td><code>DropdownButton</code></td><td>Tombol dropdown dengan daftar pilihan</td><td>Memilih satu item dari banyak opsi</td></tr>
-    <tr><td><code>Slider</code></td><td>Penggeser untuk memilih nilai numerik</td><td>Pengaturan volume, kecerahan, rentang harga</td></tr>
-    <tr><td><code>showDatePicker</code></td><td>Fungsi untuk menampilkan dialog tanggal</td><td>Untuk input tanggal lahir atau jadwal</td></tr>
+    <tr><th>Widget</th><th>Fungsi</th><th>Kapan Digunakan</th><th>Dokumentasi</th></tr>
+    <tr><td><code>Form</code></td><td>Wadah untuk field input</td><td>Mengelola validasi dan penyimpanan grup input</td><td><a href="https://api.flutter.dev/flutter/widgets/Form-class.html" target="_blank" class="doc-button">Lihat Dokumentasi</a></td></tr>
+    <tr><td><code>TextFormField</code></td><td>Input teks dengan integrasi <code>Form</code></td><td>Input email, password, dll., dengan validasi</td><td><a href="https://api.flutter.dev/flutter/material/TextFormField-class.html" target="_blank" class="doc-button">Lihat Dokumentasi</a></td></tr>
+    <tr><td><code>Checkbox</code> / <code>Radio</code> / <code>Switch</code></td><td>Pilihan biner atau tunggal</td><td>Pengaturan, persetujuan syarat, pilihan opsi</td><td><a href="https://api.flutter.dev/flutter/material/Checkbox-class.html" target="_blank" class="doc-button">Lihat Dokumentasi</a></td></tr>
+    <tr><td><code>DropdownButton</code></td><td>Tombol dropdown dengan daftar pilihan</td><td>Memilih satu item dari banyak opsi</td><td><a href="https://api.flutter.dev/flutter/material/DropdownButton-class.html" target="_blank" class="doc-button">Lihat Dokumentasi</a></td></tr>
+    <tr><td><code>Slider</code></td><td>Penggeser untuk memilih nilai numerik</td><td>Pengaturan volume, kecerahan, rentang harga</td><td><a href="https://api.flutter.dev/flutter/material/Slider-class.html" target="_blank" class="doc-button">Lihat Dokumentasi</a></td></tr>
+    <tr><td><code>showDatePicker</code></td><td>Fungsi untuk menampilkan dialog tanggal</td><td>Untuk input tanggal lahir atau jadwal</td><td><a href="https://api.flutter.dev/flutter/material/showDatePicker.html" target="_blank" class="doc-button">Lihat Dokumentasi</a></td></tr>
   </table>
 
   <hr/>
 
   <h2>🔴 5. Navigasi & Halaman</h2>
   <table>
-    <tr><th>Widget</th><th>Fungsi</th><th>Kapan Digunakan</th></tr>
-    <tr><td><code>Scaffold</code></td><td>Struktur dasar halaman Material Design</td><td>Sebagai root dari setiap halaman aplikasi</td></tr>
-    <tr><td><code>AppBar</code></td><td>Bar bagian atas halaman</td><td>Menampilkan judul, aksi, dan tombol kembali</td></tr>
-    <tr><td><code>BottomNavigationBar</code></td><td>Tab navigasi di bagian bawah</td><td>Pindah antar halaman utama aplikasi (misal: Home, Profile)</td></tr>
-    <tr><td><code>Navigator</code></td><td>Mengelola tumpukan halaman (routes)</td><td>Untuk pindah halaman (push) dan kembali (pop)</td></tr>
-    <tr><td><code>TabBar</code> & <code>TabBarView</code></td><td>Membuat tab horizontal</td><td>Di bawah <code>AppBar</code> untuk sub-navigasi</td></tr>
-    <tr><td><code>Drawer</code></td><td>Panel navigasi yang muncul dari samping</td><td>Menu tersembunyi dengan banyak link navigasi</td></tr>
+    <tr><th>Widget</th><th>Fungsi</th><th>Kapan Digunakan</th><th>Dokumentasi</th></tr>
+    <tr><td><code>Scaffold</code></td><td>Struktur dasar halaman Material Design</td><td>Sebagai root dari setiap halaman aplikasi</td><td><a href="https://api.flutter.dev/flutter/material/Scaffold-class.html" target="_blank" class="doc-button">Lihat Dokumentasi</a></td></tr>
+    <tr><td><code>AppBar</code></td><td>Bar bagian atas halaman</td><td>Menampilkan judul, aksi, dan tombol kembali</td><td><a href="https://api.flutter.dev/flutter/material/AppBar-class.html" target="_blank" class="doc-button">Lihat Dokumentasi</a></td></tr>
+    <tr><td><code>BottomNavigationBar</code></td><td>Tab navigasi di bagian bawah</td><td>Pindah antar halaman utama aplikasi</td><td><a href="https://api.flutter.dev/flutter/material/BottomNavigationBar-class.html" target="_blank" class="doc-button">Lihat Dokumentasi</a></td></tr>
+    <tr><td><code>Navigator</code></td><td>Mengelola tumpukan halaman (routes)</td><td>Untuk pindah halaman (push) dan kembali (pop)</td><td><a href="https://api.flutter.dev/flutter/widgets/Navigator-class.html" target="_blank" class="doc-button">Lihat Dokumentasi</a></td></tr>
+    <tr><td><code>TabBar</code> & <code>TabBarView</code></td><td>Membuat tab horizontal</td><td>Di bawah <code>AppBar</code> untuk sub-navigasi</td><td><a href="https://api.flutter.dev/flutter/material/TabBar-class.html" target="_blank" class="doc-button">Lihat Dokumentasi</a></td></tr>
+    <tr><td><code>Drawer</code></td><td>Panel navigasi yang muncul dari samping</td><td>Menu tersembunyi dengan banyak link navigasi</td><td><a href="https://api.flutter.dev/flutter/material/Drawer-class.html" target="_blank" class="doc-button">Lihat Dokumentasi</a></td></tr>
   </table>
 
   <hr/>
 
   <h2>🔵 6. Interaksi & Aksi</h2>
   <table>
-    <tr><th>Widget</th><th>Fungsi</th><th>Kapan Digunakan</th></tr>
-    <tr><td><code>ElevatedButton</code></td><td>Tombol dengan latar belakang (emphasis)</td><td>Untuk aksi utama di halaman (misal: "Simpan", "Login")</td></tr>
-    <tr><td><code>TextButton</code></td><td>Tombol berupa teks tanpa latar belakang</td><td>Untuk aksi sekunder (misal: "Batal", "Lupa Password")</td></tr>
-    <tr><td><code>IconButton</code></td><td>Tombol yang hanya berisi ikon</td><td>Aksi umum seperti hapus, edit, favorit di dalam list</td></tr>
-    <tr><td><code>FloatingActionButton</code></td><td>Tombol bulat yang "mengambang"</td><td>Aksi utama dan kontekstual di halaman (misal: "Tambah")</td></tr>
-    <tr><td><code>GestureDetector</code></td><td>Mendeteksi berbagai gesture (ketuk, geser)</td><td>Membuat widget apa pun jadi interaktif</td></tr>
-    <tr><td><code>InkWell</code></td><td>Memberi efek "ripple" saat diketuk</td><td>Memberi feedback visual pada interaksi di widget kustom</td></tr>
+    <tr><th>Widget</th><th>Fungsi</th><th>Kapan Digunakan</th><th>Dokumentasi</th></tr>
+    <tr><td><code>ElevatedButton</code></td><td>Tombol dengan latar belakang (emphasis)</td><td>Untuk aksi utama di halaman ("Simpan", "Login")</td><td><a href="https://api.flutter.dev/flutter/material/ElevatedButton-class.html" target="_blank" class="doc-button">Lihat Dokumentasi</a></td></tr>
+    <tr><td><code>TextButton</code></td><td>Tombol berupa teks tanpa latar belakang</td><td>Untuk aksi sekunder ("Batal", "Lupa Password")</td><td><a href="https://api.flutter.dev/flutter/material/TextButton-class.html" target="_blank" class="doc-button">Lihat Dokumentasi</a></td></tr>
+    <tr><td><code>IconButton</code></td><td>Tombol yang hanya berisi ikon</td><td>Aksi umum seperti hapus, edit, favorit di dalam list</td><td><a href="https://api.flutter.dev/flutter/material/IconButton-class.html" target="_blank" class="doc-button">Lihat Dokumentasi</a></td></tr>
+    <tr><td><code>FloatingActionButton</code></td><td>Tombol bulat yang "mengambang"</td><td>Aksi utama dan kontekstual di halaman ("Tambah")</td><td><a href="https://api.flutter.dev/flutter/material/FloatingActionButton-class.html" target="_blank" class="doc-button">Lihat Dokumentasi</a></td></tr>
+    <tr><td><code>GestureDetector</code></td><td>Mendeteksi berbagai gesture (ketuk, geser)</td><td>Membuat widget apa pun jadi interaktif</td><td><a href="https://api.flutter.dev/flutter/widgets/GestureDetector-class.html" target="_blank" class="doc-button">Lihat Dokumentasi</a></td></tr>
+    <tr><td><code>InkWell</code></td><td>Memberi efek "ripple" saat diketuk</td><td>Memberi feedback visual pada interaksi</td><td><a href="https://api.flutter.dev/flutter/material/InkWell-class.html" target="_blank" class="doc-button">Lihat Dokumentasi</a></td></tr>
   </table>
 
   <hr/>
 
   <h2>🟣 7. Gambar & Media</h2>
   <table>
-    <tr><th>Widget</th><th>Fungsi</th><th>Kapan Digunakan</th></tr>
-    <tr><td><code>Image.asset</code></td><td>Menampilkan gambar dari folder assets</td><td>Untuk logo, ikon kustom, gambar statis</td></tr>
-    <tr><td><code>Image.network</code></td><td>Menampilkan gambar dari URL</td><td>Menampilkan gambar dari internet/API</td></tr>
-    <tr><td><code>FadeInImage</code></td><td>Gambar placeholder saat gambar asli dimuat</td><td>Memperhalus pengalaman memuat gambar dari network</td></tr>
-    <tr><td><code>CircleAvatar</code></td><td>Wadah bundar, biasanya untuk gambar</td><td>Menampilkan foto profil pengguna</td></tr>
-    <tr><td><code>Placeholder</code></td><td>Kotak silang untuk menandai ruang UI</td><td>Saat merancang layout sebelum ada konten final</td></tr>
+    <tr><th>Widget</th><th>Fungsi</th><th>Kapan Digunakan</th><th>Dokumentasi</th></tr>
+    <tr><td><code>Image.asset</code></td><td>Menampilkan gambar dari folder assets</td><td>Untuk logo, ikon kustom, gambar statis</td><td><a href="https://api.flutter.dev/flutter/widgets/Image-class.html" target="_blank" class="doc-button">Lihat Dokumentasi</a></td></tr>
+    <tr><td><code>Image.network</code></td><td>Menampilkan gambar dari URL</td><td>Menampilkan gambar dari internet/API</td><td><a href="https://api.flutter.dev/flutter/widgets/Image-class.html" target="_blank" class="doc-button">Lihat Dokumentasi</a></td></tr>
+    <tr><td><code>FadeInImage</code></td><td>Gambar placeholder saat gambar asli dimuat</td><td>Memperhalus pengalaman memuat gambar</td><td><a href="https://api.flutter.dev/flutter/widgets/FadeInImage-class.html" target="_blank" class="doc-button">Lihat Dokumentasi</a></td></tr>
+    <tr><td><code>CircleAvatar</code></td><td>Wadah bundar, biasanya untuk gambar</td><td>Menampilkan foto profil pengguna</td><td><a href="https://api.flutter.dev/flutter/material/CircleAvatar-class.html" target="_blank" class="doc-button">Lihat Dokumentasi</a></td></tr>
+    <tr><td><code>Placeholder</code></td><td>Kotak silang untuk menandai ruang UI</td><td>Saat merancang layout sebelum ada konten final</td><td><a href="https://api.flutter.dev/flutter/widgets/Placeholder-class.html" target="_blank" class="doc-button">Lihat Dokumentasi</a></td></tr>
   </table>
 
   <hr/>
   
   <h2>💬 8. Dialog & Umpan Balik</h2>
   <table>
-    <tr><th>Widget</th><th>Fungsi</th><th>Kapan Digunakan</th></tr>
-    <tr><td><code>AlertDialog</code></td><td>Dialog pop-up untuk konfirmasi/informasi</td><td>Meminta konfirmasi hapus, menampilkan pesan error</td></tr>
-    <tr><td><code>SnackBar</code></td><td>Notifikasi sementara di bawah layar</td><td>Memberi umpan balik singkat (misal: "Item disimpan")</td></tr>
-    <tr><td><code>BottomSheet</code></td><td>Panel yang muncul dari bawah layar</td><td>Menampilkan opsi tambahan tanpa pindah halaman</td></tr>
-    <tr><td><code>Tooltip</code></td><td>Menampilkan pesan saat widget ditahan lama</td><td>Memberi petunjuk fungsi sebuah ikon/tombol</td></tr>
-    <tr><td><code>CircularProgressIndicator</code></td><td>Indikator loading berputar</td><td>Menandakan proses yang sedang berjalan (tanpa progres)</td></tr>
-    <tr><td><code>LinearProgressIndicator</code></td><td>Indikator loading berupa bar horizontal</td><td>Menandakan progres unduhan atau unggahan</td></tr>
+    <tr><th>Widget</th><th>Fungsi</th><th>Kapan Digunakan</th><th>Dokumentasi</th></tr>
+    <tr><td><code>AlertDialog</code></td><td>Dialog pop-up untuk konfirmasi/informasi</td><td>Meminta konfirmasi hapus, menampilkan pesan error</td><td><a href="https://api.flutter.dev/flutter/material/AlertDialog-class.html" target="_blank" class="doc-button">Lihat Dokumentasi</a></td></tr>
+    <tr><td><code>SnackBar</code></td><td>Notifikasi sementara di bawah layar</td><td>Memberi umpan balik singkat ("Item disimpan")</td><td><a href="https://api.flutter.dev/flutter/material/SnackBar-class.html" target="_blank" class="doc-button">Lihat Dokumentasi</a></td></tr>
+    <tr><td><code>BottomSheet</code></td><td>Panel yang muncul dari bawah layar</td><td>Menampilkan opsi tambahan tanpa pindah halaman</td><td><a href="https://api.flutter.dev/flutter/material/BottomSheet-class.html" target="_blank" class="doc-button">Lihat Dokumentasi</a></td></tr>
+    <tr><td><code>Tooltip</code></td><td>Menampilkan pesan saat widget ditahan lama</td><td>Memberi petunjuk fungsi sebuah ikon/tombol</td><td><a href="https://api.flutter.dev/flutter/material/Tooltip-class.html" target="_blank" class="doc-button">Lihat Dokumentasi</a></td></tr>
+    <tr><td><code>CircularProgressIndicator</code></td><td>Indikator loading berputar</td><td>Menandakan proses yang sedang berjalan</td><td><a href="https://api.flutter.dev/flutter/material/CircularProgressIndicator-class.html" target="_blank" class="doc-button">Lihat Dokumentasi</a></td></tr>
+    <tr><td><code>LinearProgressIndicator</code></td><td>Indikator loading berupa bar horizontal</td><td>Menandakan progres unduhan atau unggahan</td><td><a href="https://api.flutter.dev/flutter/material/LinearProgressIndicator-class.html" target="_blank" class="doc-button">Lihat Dokumentasi</a></td></tr>
   </table>
 
   <hr/>
 
   <h2>🟤 9. Async & State Management</h2>
   <table>
-    <tr><th>Widget</th><th>Fungsi</th><th>Kapan Digunakan</th></tr>
-    <tr><td><code>FutureBuilder</code></td><td>Membangun UI berdasarkan hasil <code>Future</code></td><td>Menampilkan data dari API atau operasi async sekali jalan</td></tr>
-    <tr><td><code>StreamBuilder</code></td><td>Membangun UI berdasarkan data dari <code>Stream</code></td><td>Menampilkan data realtime (misal: chat, data sensor)</td></tr>
-    <tr><td><code>ValueListenableBuilder</code></td><td>Membangun UI dari perubahan satu nilai</td><td>Untuk state management sederhana tanpa package eksternal</td></tr>
+    <tr><th>Widget</th><th>Fungsi</th><th>Kapan Digunakan</th><th>Dokumentasi</th></tr>
+    <tr><td><code>FutureBuilder</code></td><td>Membangun UI berdasarkan hasil <code>Future</code></td><td>Menampilkan data dari API atau operasi async</td><td><a href="https://api.flutter.dev/flutter/widgets/FutureBuilder-class.html" target="_blank" class="doc-button">Lihat Dokumentasi</a></td></tr>
+    <tr><td><code>StreamBuilder</code></td><td>Membangun UI berdasarkan data dari <code>Stream</code></td><td>Menampilkan data realtime (chat, data sensor)</td><td><a href="https://api.flutter.dev/flutter/widgets/StreamBuilder-class.html" target="_blank" class="doc-button">Lihat Dokumentasi</a></td></tr>
+    <tr><td><code>ValueListenableBuilder</code></td><td>Membangun UI dari perubahan satu nilai</td><td>Untuk state management sederhana</td><td><a href="https://api.flutter.dev/flutter/widgets/ValueListenableBuilder-class.html" target="_blank" class="doc-button">Lihat Dokumentasi</a></td></tr>
   </table>
 
 </div>
