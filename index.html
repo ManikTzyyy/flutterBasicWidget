@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Daftar Widget Flutter</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+      margin: 0;
+      padding: 2rem;
+    }
+    h1, h2 {
+      color: #2c3e50;
+      border-bottom: 2px solid #e0e0e0;
+      padding-bottom: 0.3rem;
+      margin-top: 2rem;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1rem;
+      background-color: #fff;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+      border-radius: 6px;
+      overflow: hidden;
+    }
+    th, td {
+      padding: 0.8rem 1rem;
+      text-align: left;
+      border-bottom: 1px solid #eee;
+    }
+    th {
+      background-color: #ecf0f1;
+      font-weight: bold;
+    }
+    tr:hover {
+      background-color: #f1f1f1;
+    }
+    code {
+      background: #f4f4f4;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: monospace;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>📚 Daftar Widget Flutter</h1>
+
+  <h2>🔷 1. Layout & Struktur</h2>
+  <table>
+    <tr><th>Widget</th><th>Fungsi</th><th>Kapan Digunakan</th></tr>
+    <tr><td><code>Container</code></td><td>Wrapper serbaguna</td><td>Untuk layout dasar dan dekorasi</td></tr>
+    <tr><td><code>SizedBox</code></td><td>Spasi kosong atau ukuran tetap</td><td>Memberi jarak antar elemen</td></tr>
+    <tr><td><code>Padding</code></td><td>Spasi di dalam widget</td><td>Untuk menjaga ruang internal</td></tr>
+    <tr><td><code>Align</code> / <code>Center</code></td><td>Posisi anak dalam parent</td><td>Untuk menyusun posisi child</td></tr>
+    <tr><td><code>ConstrainedBox</code></td><td>Batasan min/max ukuran</td><td>Atasi layout overflow</td></tr>
+    <tr><td><code>Stack</code></td><td>Menumpuk widget</td><td>Posisi bebas seperti badge</td></tr>
+    <tr><td><code>Wrap</code></td><td>Otomatis ke baris baru</td><td>Untuk chip/tag responsif</td></tr>
+    <tr><td><code>Expanded</code></td><td>Isi ruang tersisa</td><td>Dalam <code>Row</code>/<code>Column</code></td></tr>
+    <tr><td><code>Flexible</code></td><td>Isi ruang sebagian</td><td>Proporsi fleksibel</td></tr>
+  </table>
+
+  <h2>🟢 2. Scroll, List, Grid</h2>
+  <table>
+    <tr><th>Widget</th><th>Fungsi</th><th>Kapan Digunakan</th></tr>
+    <tr><td><code>SingleChildScrollView</code></td><td>Scroll untuk 1 anak</td><td>Layout panjang statis</td></tr>
+    <tr><td><code>ListView</code></td><td>Scrollable list</td><td>Data banyak atau dinamis</td></tr>
+    <tr><td><code>ListView.builder</code></td><td>Lazy loading list</td><td>List dari API</td></tr>
+    <tr><td><code>GridView</code></td><td>Grid layout</td><td>Galeri, katalog</td></tr>
+    <tr><td><code>CustomScrollView</code></td><td>Scroll kompleks</td><td>Gabungan list + grid + appbar</td></tr>
+  </table>
+
+  <h2>🟡 3. Input & Form</h2>
+  <table>
+    <tr><th>Widget</th><th>Fungsi</th><th>Kapan Digunakan</th></tr>
+    <tr><td><code>TextField</code></td><td>Input teks biasa</td><td>Untuk masukan sederhana</td></tr>
+    <tr><td><code>TextFormField</code></td><td>Input dengan validasi</td><td>Bersama <code>Form</code></td></tr>
+    <tr><td><code>Checkbox</code>, <code>Radio</code>, <code>Switch</code></td><td>Pilihan</td><td>Input boolean</td></tr>
+    <tr><td><code>DropdownButton</code></td><td>Pilihan dropdown</td><td>Opsi banyak</td></tr>
+  </table>
+
+  <h2>🔴 4. Navigasi & Struktur Halaman</h2>
+  <table>
+    <tr><th>Widget</th><th>Fungsi</th><th>Kapan Digunakan</th></tr>
+    <tr><td><code>Scaffold</code></td><td>Struktur halaman</td><td>Layout dasar aplikasi</td></tr>
+    <tr><td><code>AppBar</code></td><td>Top bar</td><td>Judul dan aksi halaman</td></tr>
+    <tr><td><code>BottomNavigationBar</code></td><td>Tab navigasi bawah</td><td>Aplikasi bertab</td></tr>
+    <tr><td><code>Navigator</code></td><td>Transisi antar halaman</td><td>Navigasi antar screen</td></tr>
+  </table>
+
+  <h2>🔵 5. Interaksi & Aksi</h2>
+  <table>
+    <tr><th>Widget</th><th>Fungsi</th><th>Kapan Digunakan</th></tr>
+    <tr><td><code>GestureDetector</code></td><td>Menangkap gesture</td><td>Widget jadi interaktif</td></tr>
+    <tr><td><code>InkWell</code></td><td>Ripple effect</td><td>Interaksi UI Material</td></tr>
+    <tr><td><code>ElevatedButton</code>, <code>TextButton</code></td><td>Tombol</td><td>Aksi utama/sekunder</td></tr>
+    <tr><td><code>FloatingActionButton</code></td><td>Tombol bulat</td><td>Aksi cepat halaman</td></tr>
+  </table>
+
+  <h2>🟣 6. Gambar & Media</h2>
+  <table>
+    <tr><th>Widget</th><th>Fungsi</th><th>Kapan Digunakan</th></tr>
+    <tr><td><code>Image.asset</code></td><td>Gambar lokal</td><td>Dari folder assets</td></tr>
+    <tr><td><code>Image.network</code></td><td>Gambar online</td><td>Dari URL</td></tr>
+    <tr><td><code>Icon</code></td><td>Ikon Flutter</td><td>Simbol UI</td></tr>
+    <tr><td><code>CircleAvatar</code></td><td>Avatar bundar</td><td>Profil pengguna</td></tr>
+  </table>
+
+  <h2>🟤 7. Async & State</h2>
+  <table>
+    <tr><th>Widget</th><th>Fungsi</th><th>Kapan Digunakan</th></tr>
+    <tr><td><code>FutureBuilder</code></td><td>Menangani Future</td><td>Data async dari API</td></tr>
+    <tr><td><code>StreamBuilder</code></td><td>Menangani Stream</td><td>Data realtime</td></tr>
+    <tr><td><code>ValueListenableBuilder</code></td><td>Bangun UI dari perubahan nilai</td><td>Untuk perubahan sederhana</td></tr>
+  </table>
+
+</body>
+</html>
